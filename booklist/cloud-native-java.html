@@ -280,22 +280,27 @@
   
   
   
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
-  var cloudTieConfig = {
-    url: "https://www.caizhukui.site/booklist/cloud-native-java.html", 
-    sourceId: "",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
+var gitment = new Gitment({
+  id: "https://www.caizhukui.site/booklist/cloud-native-java.html",
+  owner: 'egoecust',
+  repo: 'egoecust.github.io',
+  oauth: {
+    client_id: '794f4a9d258b8313fa82',
+    client_secret: '5233335f91ad6d9bf5e5e5a89b42229962105d7c',
+  },
+})
+gitment.render('gitment-ctn')
 </script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-  
-
-  
-
-  
-
   
 
 
