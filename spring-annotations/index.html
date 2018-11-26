@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://www.caizhukui.site">
-  <title>我的第一篇博客 | 蔡朱奎的博客</title>
+  <title>Spring注解大全 | 蔡朱奎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的第一篇博客">
-<meta name="keywords" content="Java,后端开发">
+  <meta name="description" content="Spring注解大全">
+<meta name="keywords" content="Java,Web,Spring">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="https://www.caizhukui.site/my-first-blog/index.html">
+<meta property="og:title" content="Spring注解大全">
+<meta property="og:url" content="https://www.caizhukui.site/spring-annotations/index.html">
 <meta property="og:site_name" content="蔡朱奎的博客">
-<meta property="og:description" content="我的第一篇博客">
+<meta property="og:description" content="Spring注解大全">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-16T07:25:10.709Z">
+<meta property="og:updated_time" content="2018-11-26T10:04:29.656Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一篇博客">
-<meta name="twitter:description" content="我的第一篇博客">
+<meta name="twitter:title" content="Spring注解大全">
+<meta name="twitter:description" content="Spring注解大全">
   
     <link rel="alternative" href="/atom.xml" title="蔡朱奎的博客" type="application/atom+xml">
   
@@ -155,19 +155,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-my-first-blog" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-spring-annotations" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客
+      Spring注解大全
     </h1>
   
 
         
-        <a href="/my-first-blog/" class="archive-article-date">
+        <a href="/spring-annotations/" class="archive-article-date">
   	<time datetime="2018-11-16T05:59:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-16</time>
 </a>
         
@@ -175,18 +175,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用github pages服务搭建博客的好处有：</p>
-<ol>
-<li>全是静态文件，访问速度快；</li>
-<li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li>
-<li>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</li>
-</ol>
+        <h4 id="Spring-MVC注解"><a href="#Spring-MVC注解" class="headerlink" title="Spring MVC注解"></a>Spring MVC注解</h4><h5 id="RestController"><a href="#RestController" class="headerlink" title="@RestController"></a>@RestController</h5><p>组合注解，@RestController = @Controller + @ResponseBody</p>
+<h5 id="RequestMapping"><a href="#RequestMapping" class="headerlink" title="@RequestMapping"></a>@RequestMapping</h5><p>如果没有指定请求方式，将接收Get、Post、Put、Delete、Head、Options等所有的请求方式。</p>
+<h5 id="GetMapping、-PostMapping、-PutMapping、-DeleteMapping"><a href="#GetMapping、-PostMapping、-PutMapping、-DeleteMapping" class="headerlink" title="@GetMapping、@PostMapping、@PutMapping、@DeleteMapping"></a>@GetMapping、@PostMapping、@PutMapping、@DeleteMapping</h5><p>组合注解，@GetMapping = @RequestMapping(method = RequestMethod.GET)，其它类推。</p>
+<h5 id="ControllerAdvice"><a href="#ControllerAdvice" class="headerlink" title="@ControllerAdvice"></a>@ControllerAdvice</h5><h4 id="Spring-Boot注解"><a href="#Spring-Boot注解" class="headerlink" title="Spring Boot注解"></a>Spring Boot注解</h4><h5 id="SpringBootConfiguration"><a href="#SpringBootConfiguration" class="headerlink" title="@SpringBootConfiguration"></a>@SpringBootConfiguration</h5><p>Spring Boot项目的配置注解，在Spring Boot项目中推荐使用该注解来替代@Configuration注解。</p>
+<h5 id="EnableAutoConfiguration"><a href="#EnableAutoConfiguration" class="headerlink" title="@EnableAutoConfiguration"></a>@EnableAutoConfiguration</h5><p>启动自动配置，该注解会让Spring Boot根据当前项目所依赖的jar包自动配置项目的相关配置项。</p>
+<h5 id="SpringBootApplication"><a href="#SpringBootApplication" class="headerlink" title="@SpringBootApplication"></a>@SpringBootApplication</h5><p>组合注解，@SpringBootApplication = @SpringBootConfiguration + @EnableAutoConfiguration + @ComponentScan<br>@SpringBootApplication是Spring Boot的核心注解，用此注解标注的入口类是应用的启动类。Spring Boot默认会扫描该注解所在类的同级包以及它的子包，建议将该注解修饰的入口类放置在项目包下，以保证能自动扫描到项目所有的包。</p>
+<h5 id="ConfigurationProperties"><a href="#ConfigurationProperties" class="headerlink" title="@ConfigurationProperties"></a>@ConfigurationProperties</h5><h5 id="ConditionalOnClass"><a href="#ConditionalOnClass" class="headerlink" title="@ConditionalOnClass"></a>@ConditionalOnClass</h5><p>条件注解，只有当指定的类都存在时才执行被标注的配置类。<br>@ConditionalOnClass({ Servlet.class, DispatcherServlet.class, WebMvcConfigurerAdapter.class })</p>
+<h5 id="ConditionalOnMissingBean"><a href="#ConditionalOnMissingBean" class="headerlink" title="@ConditionalOnMissingBean"></a>@ConditionalOnMissingBean</h5><p>条件注解，只有当指定的类都不存在时才执行被标注的配置类。<br>@ConditionalOnMissingBean(WebMvcConfigurationSupport.class)</p>
 <a id="more"></a>
-<ol start="4">
-<li>数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</li>
-<li>博客内容可以轻松打包、转移、发布到其它平台；</li>
-<li>等等；</li>
-</ol>
 
       
 
@@ -204,7 +201,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">后端开发</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Web</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
         		</li>
       		
 		</ul>
@@ -271,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://www.caizhukui.site/my-first-blog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://www.caizhukui.site/spring-annotations/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -314,7 +315,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring-MVC注解"><span class="toc-number">1.</span> <span class="toc-text">Spring MVC注解</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#RestController"><span class="toc-number">1.1.</span> <span class="toc-text">@RestController</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#RequestMapping"><span class="toc-number">1.2.</span> <span class="toc-text">@RequestMapping</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#GetMapping、-PostMapping、-PutMapping、-DeleteMapping"><span class="toc-number">1.3.</span> <span class="toc-text">@GetMapping、@PostMapping、@PutMapping、@DeleteMapping</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ControllerAdvice"><span class="toc-number">1.4.</span> <span class="toc-text">@ControllerAdvice</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring-Boot注解"><span class="toc-number">2.</span> <span class="toc-text">Spring Boot注解</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#SpringBootConfiguration"><span class="toc-number">2.1.</span> <span class="toc-text">@SpringBootConfiguration</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#EnableAutoConfiguration"><span class="toc-number">2.2.</span> <span class="toc-text">@EnableAutoConfiguration</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#SpringBootApplication"><span class="toc-number">2.3.</span> <span class="toc-text">@SpringBootApplication</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ConfigurationProperties"><span class="toc-number">2.4.</span> <span class="toc-text">@ConfigurationProperties</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ConditionalOnClass"><span class="toc-number">2.5.</span> <span class="toc-text">@ConditionalOnClass</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ConditionalOnMissingBean"><span class="toc-number">2.6.</span> <span class="toc-text">@ConditionalOnMissingBean</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -339,7 +340,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "https://www.caizhukui.site/my-first-blog/",
+  id: "https://www.caizhukui.site/spring-annotations/",
   owner: 'egoecust',
   repo: 'egoecust.github.io',
   oauth: {
@@ -467,7 +468,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">后端开发</a>
+                <a href="javascript:void(0)" class="js-tag color4">Web</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
             
             <div class="clearfix"></div>

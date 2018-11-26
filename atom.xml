@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.caizhukui.site/"/>
-  <updated>2018-11-16T07:25:10.709Z</updated>
+  <updated>2018-11-26T10:04:29.656Z</updated>
   <id>https://www.caizhukui.site/</id>
   
   <author>
@@ -17,17 +17,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>我的第一篇博客</title>
-    <link href="https://www.caizhukui.site/my-first-blog/"/>
-    <id>https://www.caizhukui.site/my-first-blog/</id>
+    <title>Spring注解大全</title>
+    <link href="https://www.caizhukui.site/spring-annotations/"/>
+    <id>https://www.caizhukui.site/spring-annotations/</id>
     <published>2018-11-16T05:59:23.000Z</published>
-    <updated>2018-11-16T07:25:10.709Z</updated>
+    <updated>2018-11-26T10:04:29.656Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用github pages服务搭建博客的好处有：</p><ol><li>全是静态文件，访问速度快；</li><li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li><li>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</li></ol><a id="more"></a><ol start="4"><li>数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</li><li>博客内容可以轻松打包、转移、发布到其它平台；</li><li>等等；</li></ol>]]></content>
+    <content type="html"><![CDATA[<h4 id="Spring-MVC注解"><a href="#Spring-MVC注解" class="headerlink" title="Spring MVC注解"></a>Spring MVC注解</h4><h5 id="RestController"><a href="#RestController" class="headerlink" title="@RestController"></a>@RestController</h5><p>组合注解，@RestController = @Controller + @ResponseBody</p><h5 id="RequestMapping"><a href="#RequestMapping" class="headerlink" title="@RequestMapping"></a>@RequestMapping</h5><p>如果没有指定请求方式，将接收Get、Post、Put、Delete、Head、Options等所有的请求方式。</p><h5 id="GetMapping、-PostMapping、-PutMapping、-DeleteMapping"><a href="#GetMapping、-PostMapping、-PutMapping、-DeleteMapping" class="headerlink" title="@GetMapping、@PostMapping、@PutMapping、@DeleteMapping"></a>@GetMapping、@PostMapping、@PutMapping、@DeleteMapping</h5><p>组合注解，@GetMapping = @RequestMapping(method = RequestMethod.GET)，其它类推。</p><h5 id="ControllerAdvice"><a href="#ControllerAdvice" class="headerlink" title="@ControllerAdvice"></a>@ControllerAdvice</h5><h4 id="Spring-Boot注解"><a href="#Spring-Boot注解" class="headerlink" title="Spring Boot注解"></a>Spring Boot注解</h4><h5 id="SpringBootConfiguration"><a href="#SpringBootConfiguration" class="headerlink" title="@SpringBootConfiguration"></a>@SpringBootConfiguration</h5><p>Spring Boot项目的配置注解，在Spring Boot项目中推荐使用该注解来替代@Configuration注解。</p><h5 id="EnableAutoConfiguration"><a href="#EnableAutoConfiguration" class="headerlink" title="@EnableAutoConfiguration"></a>@EnableAutoConfiguration</h5><p>启动自动配置，该注解会让Spring Boot根据当前项目所依赖的jar包自动配置项目的相关配置项。</p><h5 id="SpringBootApplication"><a href="#SpringBootApplication" class="headerlink" title="@SpringBootApplication"></a>@SpringBootApplication</h5><p>组合注解，@SpringBootApplication = @SpringBootConfiguration + @EnableAutoConfiguration + @ComponentScan<br>@SpringBootApplication是Spring Boot的核心注解，用此注解标注的入口类是应用的启动类。Spring Boot默认会扫描该注解所在类的同级包以及它的子包，建议将该注解修饰的入口类放置在项目包下，以保证能自动扫描到项目所有的包。</p><h5 id="ConfigurationProperties"><a href="#ConfigurationProperties" class="headerlink" title="@ConfigurationProperties"></a>@ConfigurationProperties</h5><h5 id="ConditionalOnClass"><a href="#ConditionalOnClass" class="headerlink" title="@ConditionalOnClass"></a>@ConditionalOnClass</h5><p>条件注解，只有当指定的类都存在时才执行被标注的配置类。<br>@ConditionalOnClass({ Servlet.class, DispatcherServlet.class, WebMvcConfigurerAdapter.class })</p><h5 id="ConditionalOnMissingBean"><a href="#ConditionalOnMissingBean" class="headerlink" title="@ConditionalOnMissingBean"></a>@ConditionalOnMissingBean</h5><p>条件注解，只有当指定的类都不存在时才执行被标注的配置类。<br>@ConditionalOnMissingBean(WebMvcConfigurationSupport.class)</p><a id="more"></a>]]></content>
     
     <summary type="html">
     
-      我的第一篇博客
+      Spring注解大全
     
     </summary>
     
@@ -36,7 +36,9 @@
     
       <category term="Java" scheme="https://www.caizhukui.site/tags/Java/"/>
     
-      <category term="后端开发" scheme="https://www.caizhukui.site/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="Web" scheme="https://www.caizhukui.site/tags/Web/"/>
+    
+      <category term="Spring" scheme="https://www.caizhukui.site/tags/Spring/"/>
     
   </entry>
   
