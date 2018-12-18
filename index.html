@@ -156,6 +156,285 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ustvseries-db-design" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/ustvseries-db-design/">「美剧字幕站」数据库设计</a>
+    </h1>
+  
+
+        
+        <a href="/ustvseries-db-design/" class="archive-article-date">
+  	<time datetime="2018-12-18T09:07:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">DB</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/UsTvSeries//" class="article-tag-list-link color1">UsTvSeries</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/ustvseries-db-design/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-jackson-annotations" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/jackson-annotations/">Jackson注解大全</a>
+    </h1>
+  
+
+        
+        <a href="/jackson-annotations/" class="archive-article-date">
+  	<time datetime="2018-12-18T07:59:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="JsonProperty"><a href="#JsonProperty" class="headerlink" title="@JsonProperty"></a>@JsonProperty</h5><p>@JsonProperty标记在属性或者Getter方法上，用于指定别名。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonProperty</span>(<span class="string">"email"</span>)</span><br><span class="line"><span class="keyword">private</span> EmailAddress emailAddress;</span><br></pre></td></tr></table></figure></p>
+<h5 id="JsonIgnoreProperties、-JsonIgnore"><a href="#JsonIgnoreProperties、-JsonIgnore" class="headerlink" title="@JsonIgnoreProperties、@JsonIgnore"></a>@JsonIgnoreProperties、@JsonIgnore</h5><p>用于在Json序列化时将Java Bean中的一些属性忽略掉，序列化和反序列化都受影响。@JsonIgnoreProperties标记在类上，@JsonIgnore标记在属性或者方法上。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonIgnoreProperties</span>(&#123; <span class="string">"internalValue1"</span>, <span class="string">"internalValue2"</span> &#125;) </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Value</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Integer value;</span><br><span class="line">	<span class="keyword">private</span> Integer internalValue1;</span><br><span class="line">	<span class="keyword">private</span> Integer internalValue2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Value</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Integer value;</span><br><span class="line">	<span class="meta">@JsonIgnore</span></span><br><span class="line">	<span class="keyword">private</span> Integer internalValue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过@JsonIgnoreProperties注解可以简单地忽略掉Json中多余的属性。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonIgnoreProperties</span>(ignoreUnknown = <span class="keyword">true</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Value</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> Integer value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="JsonSerialize、-JsonDeserialize"><a href="#JsonSerialize、-JsonDeserialize" class="headerlink" title="@JsonSerialize、@JsonDeserialize"></a>@JsonSerialize、@JsonDeserialize</h5><p>@JsonSerialize标记在属性或者Getter方法上，用于自定义序列化规则；@JsonDeserialize标记在属性或者Setter方法上，用于自定义反序列化规则。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonSerialize</span>(using = EmailAddressSerializer.class)</span><br><span class="line"><span class="meta">@JsonDeserialize</span>(using = EmailAddressDeserializer.class)</span><br><span class="line"><span class="keyword">private</span> EmailAddress emailAddress;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span>  </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">serialize</span><span class="params">(EmailAddress value, JsonGenerator jgen,</span></span></span><br><span class="line"><span class="function"><span class="params">        SerializerProvider provider)</span> <span class="keyword">throws</span> IOException,</span></span><br><span class="line"><span class="function">        JsonProcessingException </span>&#123;</span><br><span class="line">    ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">    mapper.writeValue(jgen, value.getEmail());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="JsonFormat"><a href="#JsonFormat" class="headerlink" title="@JsonFormat"></a>@JsonFormat</h5><p>@JsonFormat标记在属性或者方法上，最常见的使用场合是指定Date类型的格式。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonFormat</span>(pattern = <span class="string">"yyyy-MM-dd"</span>, timezone = <span class="string">"GMT+8"</span>)</span><br><span class="line"><span class="keyword">private</span> Date date;</span><br></pre></td></tr></table></figure></p>
+<h5 id="JsonCreator"><a href="#JsonCreator" class="headerlink" title="@JsonCreator"></a>@JsonCreator</h5><h5 id="JsonTypeInfo"><a href="#JsonTypeInfo" class="headerlink" title="@JsonTypeInfo"></a>@JsonTypeInfo</h5><h5 id="JsonAutoDetect"><a href="#JsonAutoDetect" class="headerlink" title="@JsonAutoDetect"></a>@JsonAutoDetect</h5><p>@JsonAutoDetect用于修改Jackson默认的属性发现规则。Jackson默认会查找如下属性：</p>
+<ul>
+<li>所有被public修饰的属性</li>
+<li>所有被public修饰的Getter方法</li>
+<li>所有被public修饰的Setter方法，不管可见或不可见</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonAutoDetect</span>(fieldVisibility = JsonAutoDetect.Visibility.ANY) </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">POJOWithFields</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Integer value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Json</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/jackson-annotations/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-jpa-annotations" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/jpa-annotations/">JPA注解大全</a>
+    </h1>
+  
+
+        
+        <a href="/jpa-annotations/" class="archive-article-date">
+  	<time datetime="2018-12-04T05:20:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="Entity、-Embeddable"><a href="#Entity、-Embeddable" class="headerlink" title="@Entity、@Embeddable"></a>@Entity、@Embeddable</h5><h5 id="MappedSuperclass"><a href="#MappedSuperclass" class="headerlink" title="@MappedSuperclass"></a>@MappedSuperclass</h5><p>该注解使用在父类上面，标识的类不能映射到数据库表，但是它所拥有的属性能够映射在其子类对用的数据库表中。标识了该注解的类中不能再使用@Entity或@Table注解，但是可以使用@Id和@Column注解。</p>
+<h5 id="ElementCollection"><a href="#ElementCollection" class="headerlink" title="@ElementCollection"></a>@ElementCollection</h5><h5 id="Table"><a href="#Table" class="headerlink" title="@Table"></a>@Table</h5><h5 id="Column、-JoinColumn"><a href="#Column、-JoinColumn" class="headerlink" title="@Column、@JoinColumn"></a>@Column、@JoinColumn</h5><h5 id="ElementCollection-1"><a href="#ElementCollection-1" class="headerlink" title="@ElementCollection"></a>@ElementCollection</h5><h5 id="PersistenceContext"><a href="#PersistenceContext" class="headerlink" title="@PersistenceContext"></a>@PersistenceContext</h5>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JPA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ORM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/jpa-annotations/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-spring-annotations" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -176,14 +455,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="Spring-MVC注解"><a href="#Spring-MVC注解" class="headerlink" title="Spring MVC注解"></a>Spring MVC注解</h4><h5 id="RestController"><a href="#RestController" class="headerlink" title="@RestController"></a>@RestController</h5><p>组合注解，@RestController = @Controller + @ResponseBody</p>
-<h5 id="RequestMapping"><a href="#RequestMapping" class="headerlink" title="@RequestMapping"></a>@RequestMapping</h5><p>如果没有指定请求方式，将接收Get、Post、Put、Delete、Head、Options等所有的请求方式。</p>
-<h5 id="GetMapping、-PostMapping、-PutMapping、-DeleteMapping"><a href="#GetMapping、-PostMapping、-PutMapping、-DeleteMapping" class="headerlink" title="@GetMapping、@PostMapping、@PutMapping、@DeleteMapping"></a>@GetMapping、@PostMapping、@PutMapping、@DeleteMapping</h5><p>组合注解，@GetMapping = @RequestMapping(method = RequestMethod.GET)，其它类推。</p>
-<h5 id="ControllerAdvice"><a href="#ControllerAdvice" class="headerlink" title="@ControllerAdvice"></a>@ControllerAdvice</h5><h4 id="Spring-Boot注解"><a href="#Spring-Boot注解" class="headerlink" title="Spring Boot注解"></a>Spring Boot注解</h4><h5 id="SpringBootConfiguration"><a href="#SpringBootConfiguration" class="headerlink" title="@SpringBootConfiguration"></a>@SpringBootConfiguration</h5><p>Spring Boot项目的配置注解，在Spring Boot项目中推荐使用该注解来替代@Configuration注解。</p>
-<h5 id="EnableAutoConfiguration"><a href="#EnableAutoConfiguration" class="headerlink" title="@EnableAutoConfiguration"></a>@EnableAutoConfiguration</h5><p>启动自动配置，该注解会让Spring Boot根据当前项目所依赖的jar包自动配置项目的相关配置项。</p>
-<h5 id="SpringBootApplication"><a href="#SpringBootApplication" class="headerlink" title="@SpringBootApplication"></a>@SpringBootApplication</h5><p>组合注解，@SpringBootApplication = @SpringBootConfiguration + @EnableAutoConfiguration + @ComponentScan<br>@SpringBootApplication是Spring Boot的核心注解，用此注解标注的入口类是应用的启动类。Spring Boot默认会扫描该注解所在类的同级包以及它的子包，建议将该注解修饰的入口类放置在项目包下，以保证能自动扫描到项目所有的包。</p>
-<h5 id="ConfigurationProperties"><a href="#ConfigurationProperties" class="headerlink" title="@ConfigurationProperties"></a>@ConfigurationProperties</h5><h5 id="ConditionalOnClass"><a href="#ConditionalOnClass" class="headerlink" title="@ConditionalOnClass"></a>@ConditionalOnClass</h5><p>条件注解，只有当指定的类都存在时才执行被标注的配置类。<br>@ConditionalOnClass({ Servlet.class, DispatcherServlet.class, WebMvcConfigurerAdapter.class })</p>
-<h5 id="ConditionalOnMissingBean"><a href="#ConditionalOnMissingBean" class="headerlink" title="@ConditionalOnMissingBean"></a>@ConditionalOnMissingBean</h5><p>条件注解，只有当指定的类都不存在时才执行被标注的配置类。<br>@ConditionalOnMissingBean(WebMvcConfigurationSupport.class)</p>
+        <h3 id="Spring注解"><a href="#Spring注解" class="headerlink" title="Spring注解"></a>Spring注解</h3><h5 id="Controller、-Service、-Repository、-Component"><a href="#Controller、-Service、-Repository、-Component" class="headerlink" title="@Controller、@Service、@Repository、@Component"></a>@Controller、@Service、@Repository、@Component</h5><h5 id="Resource、-Autowired、-Qualifier"><a href="#Resource、-Autowired、-Qualifier" class="headerlink" title="@Resource、@Autowired、@Qualifier"></a>@Resource、@Autowired、@Qualifier</h5><h5 id="Configuration、-Bean"><a href="#Configuration、-Bean" class="headerlink" title="@Configuration、@Bean"></a>@Configuration、@Bean</h5><p>@Configuration注解声明了一个类为Spring的JavaConfig配置类。</p>
+<h5 id="ComponentScan"><a href="#ComponentScan" class="headerlink" title="@ComponentScan"></a>@ComponentScan</h5><h5 id="Profile"><a href="#Profile" class="headerlink" title="@Profile"></a>@Profile</h5><h5 id="EnableTransactionManager"><a href="#EnableTransactionManager" class="headerlink" title="@EnableTransactionManager"></a>@EnableTransactionManager</h5><h3 id="Spring对WebSocket的支持"><a href="#Spring对WebSocket的支持" class="headerlink" title="Spring对WebSocket的支持"></a>Spring对WebSocket的支持</h3><h5 id="EnableWebSocketMessageBroker"><a href="#EnableWebSocketMessageBroker" class="headerlink" title="@EnableWebSocketMessageBroker"></a>@EnableWebSocketMessageBroker</h5><p>该注解用于开启使用STOMP协议来传输基于代理（MessageBroker）的消息，这时候控制器（Controller）开始支持@MessageMapping，就像使用@RequestMapping一样。</p>
+<h5 id="MessageMapping、-SendTo"><a href="#MessageMapping、-SendTo" class="headerlink" title="@MessageMapping、@SendTo"></a>@MessageMapping、@SendTo</h5><p>@MessageMapping和@RequestMapping功能类似，用于设置URL映射地址，浏览器向服务器发起请求，需要通过该地址。</p>
         
           <a class="article-more-a" href="/spring-annotations/#more">更多 >></a>
         
@@ -447,11 +721,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Json</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Web</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Spring</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JPA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ORM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">DB</a>
               </li>
             
             <div class="clearfix"></div>

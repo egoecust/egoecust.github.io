@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://www.caizhukui.site">
-  <title>「Spring Boot 2企业应用实战」读书笔记 | 蔡朱奎的博客</title>
+  <title>JPA注解大全 | 蔡朱奎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="「Spring Boot 2企业应用实战」读书笔记">
-<meta name="keywords" content="Java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="「Spring Boot 2企业应用实战」读书笔记">
-<meta property="og:url" content="https://www.caizhukui.site/booklist/spring-boot2.html">
+  <meta name="description" content="JPA注解大全">
+<meta name="keywords" content="Java,JPA,ORM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JPA注解大全">
+<meta property="og:url" content="https://www.caizhukui.site/jpa-annotations/index.html">
 <meta property="og:site_name" content="蔡朱奎的博客">
-<meta property="og:description" content="「Spring Boot 2企业应用实战」读书笔记">
+<meta property="og:description" content="JPA注解大全">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-27T05:49:18.556Z">
+<meta property="og:updated_time" content="2018-12-11T12:56:21.738Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="「Spring Boot 2企业应用实战」读书笔记">
-<meta name="twitter:description" content="「Spring Boot 2企业应用实战」读书笔记">
+<meta name="twitter:title" content="JPA注解大全">
+<meta name="twitter:description" content="JPA注解大全">
   
     <link rel="alternative" href="/atom.xml" title="蔡朱奎的博客" type="application/atom+xml">
   
@@ -155,38 +155,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope="" itemprop="blogPost">
+            <article id="post-jpa-annotations" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      「Spring Boot 2企业应用实战」读书笔记
+      JPA注解大全
     </h1>
   
 
         
-        <a href="/booklist/spring-boot2.html" class="archive-article-date">
-  	<time datetime="2018-11-26T06:44:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
+        <a href="/jpa-annotations/" class="archive-article-date">
+  	<time datetime="2018-12-04T05:20:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="Spring-Boot的参数配置"><a href="#Spring-Boot的参数配置" class="headerlink" title="Spring Boot的参数配置"></a>Spring Boot的参数配置</h5><p>Spring Boot遵循 「约定优先于配置」的原则，参数配置方式可以分为以下几类：</p>
-<ul>
-<li>命令行参数</li>
-<li>系统环境变量</li>
-<li>位于文件系统中的配置文件</li>
-<li>位于classpath中的配置文件</li>
-<li>固化到代码中的配置</li>
-</ul>
-<p>以上几种方式按照优先级从高到低排列，高优先级方式提供的配置项会覆盖或者优先生效。</p>
-<h5 id="spring-boot-starter-parent的作用"><a href="#spring-boot-starter-parent的作用" class="headerlink" title="spring-boot-starter-parent的作用"></a>spring-boot-starter-parent的作用</h5><p>spring-boot-starter-parent是Spring Boot的核心启动器，包含了自动配置、日志和YAML等大量默认的配置。</p>
-<p>Spring Data JPA默认是通过Hibernate实现的。使用Spring Data JPA，只需要编写一个接口、继承一个类就能实现CRUD操作。</p>
-
+        <h5 id="Entity、-Embeddable"><a href="#Entity、-Embeddable" class="headerlink" title="@Entity、@Embeddable"></a>@Entity、@Embeddable</h5><h5 id="MappedSuperclass"><a href="#MappedSuperclass" class="headerlink" title="@MappedSuperclass"></a>@MappedSuperclass</h5><p>该注解使用在父类上面，标识的类不能映射到数据库表，但是它所拥有的属性能够映射在其子类对用的数据库表中。标识了该注解的类中不能再使用@Entity或@Table注解，但是可以使用@Id和@Column注解。</p>
+<h5 id="ElementCollection"><a href="#ElementCollection" class="headerlink" title="@ElementCollection"></a>@ElementCollection</h5><h5 id="Table"><a href="#Table" class="headerlink" title="@Table"></a>@Table</h5><h5 id="Column、-JoinColumn"><a href="#Column、-JoinColumn" class="headerlink" title="@Column、@JoinColumn"></a>@Column、@JoinColumn</h5><h5 id="ElementCollection-1"><a href="#ElementCollection-1" class="headerlink" title="@ElementCollection"></a>@ElementCollection</h5><h5 id="PersistenceContext"><a href="#PersistenceContext" class="headerlink" title="@PersistenceContext"></a>@PersistenceContext</h5>
       
 
       
@@ -194,7 +184,37 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JPA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ORM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -244,7 +264,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://www.caizhukui.site/booklist/spring-boot2.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://www.caizhukui.site/jpa-annotations/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -256,6 +276,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/jackson-annotations/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Jackson注解大全
+        
+      </div>
+    </a>
+  
+  
+    <a href="/spring-annotations/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring注解大全</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -277,7 +316,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#Spring-Boot的参数配置"><span class="toc-number">1.</span> <span class="toc-text">Spring Boot的参数配置</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#spring-boot-starter-parent的作用"><span class="toc-number">2.</span> <span class="toc-text">spring-boot-starter-parent的作用</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#Entity、-Embeddable"><span class="toc-number">1.</span> <span class="toc-text">@Entity、@Embeddable</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#MappedSuperclass"><span class="toc-number">2.</span> <span class="toc-text">@MappedSuperclass</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ElementCollection"><span class="toc-number">3.</span> <span class="toc-text">@ElementCollection</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Table"><span class="toc-number">4.</span> <span class="toc-text">@Table</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Column、-JoinColumn"><span class="toc-number">5.</span> <span class="toc-text">@Column、@JoinColumn</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ElementCollection-1"><span class="toc-number">6.</span> <span class="toc-text">@ElementCollection</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#PersistenceContext"><span class="toc-number">7.</span> <span class="toc-text">@PersistenceContext</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -302,7 +341,7 @@
 <script src="https://billts.site/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Mon Nov 26 2018 14:44:27 GMT+0800",
+  id: "Tue Dec 04 2018 13:20:12 GMT+0800",
   owner: 'egoecust',
   repo: 'egoecust.github.io',
   oauth: {
@@ -335,7 +374,7 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

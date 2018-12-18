@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://www.caizhukui.site">
-  <title>「Spring Boot 2企业应用实战」读书笔记 | 蔡朱奎的博客</title>
+  <title>Jackson注解大全 | 蔡朱奎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="「Spring Boot 2企业应用实战」读书笔记">
-<meta name="keywords" content="Java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="「Spring Boot 2企业应用实战」读书笔记">
-<meta property="og:url" content="https://www.caizhukui.site/booklist/spring-boot2.html">
+  <meta name="description" content="Jackson注解大全">
+<meta name="keywords" content="Java,Json">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jackson注解大全">
+<meta property="og:url" content="https://www.caizhukui.site/jackson-annotations/index.html">
 <meta property="og:site_name" content="蔡朱奎的博客">
-<meta property="og:description" content="「Spring Boot 2企业应用实战」读书笔记">
+<meta property="og:description" content="Jackson注解大全">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-27T05:49:18.556Z">
+<meta property="og:updated_time" content="2018-12-18T09:00:57.462Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="「Spring Boot 2企业应用实战」读书笔记">
-<meta name="twitter:description" content="「Spring Boot 2企业应用实战」读书笔记">
+<meta name="twitter:title" content="Jackson注解大全">
+<meta name="twitter:description" content="Jackson注解大全">
   
     <link rel="alternative" href="/atom.xml" title="蔡朱奎的博客" type="application/atom+xml">
   
@@ -155,37 +155,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope="" itemprop="blogPost">
+            <article id="post-jackson-annotations" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      「Spring Boot 2企业应用实战」读书笔记
+      Jackson注解大全
     </h1>
   
 
         
-        <a href="/booklist/spring-boot2.html" class="archive-article-date">
-  	<time datetime="2018-11-26T06:44:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
+        <a href="/jackson-annotations/" class="archive-article-date">
+  	<time datetime="2018-12-18T07:59:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="Spring-Boot的参数配置"><a href="#Spring-Boot的参数配置" class="headerlink" title="Spring Boot的参数配置"></a>Spring Boot的参数配置</h5><p>Spring Boot遵循 「约定优先于配置」的原则，参数配置方式可以分为以下几类：</p>
+        <h5 id="JsonProperty"><a href="#JsonProperty" class="headerlink" title="@JsonProperty"></a>@JsonProperty</h5><p>@JsonProperty标记在属性或者Getter方法上，用于指定别名。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonProperty</span>(<span class="string">"email"</span>)</span><br><span class="line"><span class="keyword">private</span> EmailAddress emailAddress;</span><br></pre></td></tr></table></figure></p>
+<h5 id="JsonIgnoreProperties、-JsonIgnore"><a href="#JsonIgnoreProperties、-JsonIgnore" class="headerlink" title="@JsonIgnoreProperties、@JsonIgnore"></a>@JsonIgnoreProperties、@JsonIgnore</h5><p>用于在Json序列化时将Java Bean中的一些属性忽略掉，序列化和反序列化都受影响。@JsonIgnoreProperties标记在类上，@JsonIgnore标记在属性或者方法上。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonIgnoreProperties</span>(&#123; <span class="string">"internalValue1"</span>, <span class="string">"internalValue2"</span> &#125;) </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Value</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Integer value;</span><br><span class="line">	<span class="keyword">private</span> Integer internalValue1;</span><br><span class="line">	<span class="keyword">private</span> Integer internalValue2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Value</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Integer value;</span><br><span class="line">	<span class="meta">@JsonIgnore</span></span><br><span class="line">	<span class="keyword">private</span> Integer internalValue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过@JsonIgnoreProperties注解可以简单地忽略掉Json中多余的属性。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonIgnoreProperties</span>(ignoreUnknown = <span class="keyword">true</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Value</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> Integer value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="JsonSerialize、-JsonDeserialize"><a href="#JsonSerialize、-JsonDeserialize" class="headerlink" title="@JsonSerialize、@JsonDeserialize"></a>@JsonSerialize、@JsonDeserialize</h5><p>@JsonSerialize标记在属性或者Getter方法上，用于自定义序列化规则；@JsonDeserialize标记在属性或者Setter方法上，用于自定义反序列化规则。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonSerialize</span>(using = EmailAddressSerializer.class)</span><br><span class="line"><span class="meta">@JsonDeserialize</span>(using = EmailAddressDeserializer.class)</span><br><span class="line"><span class="keyword">private</span> EmailAddress emailAddress;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span>  </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">serialize</span><span class="params">(EmailAddress value, JsonGenerator jgen,</span></span></span><br><span class="line"><span class="function"><span class="params">        SerializerProvider provider)</span> <span class="keyword">throws</span> IOException,</span></span><br><span class="line"><span class="function">        JsonProcessingException </span>&#123;</span><br><span class="line">    ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">    mapper.writeValue(jgen, value.getEmail());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="JsonFormat"><a href="#JsonFormat" class="headerlink" title="@JsonFormat"></a>@JsonFormat</h5><p>@JsonFormat标记在属性或者方法上，最常见的使用场合是指定Date类型的格式。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonFormat</span>(pattern = <span class="string">"yyyy-MM-dd"</span>, timezone = <span class="string">"GMT+8"</span>)</span><br><span class="line"><span class="keyword">private</span> Date date;</span><br></pre></td></tr></table></figure></p>
+<h5 id="JsonCreator"><a href="#JsonCreator" class="headerlink" title="@JsonCreator"></a>@JsonCreator</h5><h5 id="JsonTypeInfo"><a href="#JsonTypeInfo" class="headerlink" title="@JsonTypeInfo"></a>@JsonTypeInfo</h5><h5 id="JsonAutoDetect"><a href="#JsonAutoDetect" class="headerlink" title="@JsonAutoDetect"></a>@JsonAutoDetect</h5><p>@JsonAutoDetect用于修改Jackson默认的属性发现规则。Jackson默认会查找如下属性：</p>
 <ul>
-<li>命令行参数</li>
-<li>系统环境变量</li>
-<li>位于文件系统中的配置文件</li>
-<li>位于classpath中的配置文件</li>
-<li>固化到代码中的配置</li>
+<li>所有被public修饰的属性</li>
+<li>所有被public修饰的Getter方法</li>
+<li>所有被public修饰的Setter方法，不管可见或不可见</li>
 </ul>
-<p>以上几种方式按照优先级从高到低排列，高优先级方式提供的配置项会覆盖或者优先生效。</p>
-<h5 id="spring-boot-starter-parent的作用"><a href="#spring-boot-starter-parent的作用" class="headerlink" title="spring-boot-starter-parent的作用"></a>spring-boot-starter-parent的作用</h5><p>spring-boot-starter-parent是Spring Boot的核心启动器，包含了自动配置、日志和YAML等大量默认的配置。</p>
-<p>Spring Data JPA默认是通过Hibernate实现的。使用Spring Data JPA，只需要编写一个接口、继承一个类就能实现CRUD操作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonAutoDetect</span>(fieldVisibility = JsonAutoDetect.Visibility.ANY) </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">POJOWithFields</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Integer value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -194,7 +197,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Json</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -244,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://www.caizhukui.site/booklist/spring-boot2.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://www.caizhukui.site/jackson-annotations/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -256,6 +285,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/ustvseries-db-design/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          「美剧字幕站」数据库设计
+        
+      </div>
+    </a>
+  
+  
+    <a href="/jpa-annotations/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JPA注解大全</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -277,7 +325,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#Spring-Boot的参数配置"><span class="toc-number">1.</span> <span class="toc-text">Spring Boot的参数配置</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#spring-boot-starter-parent的作用"><span class="toc-number">2.</span> <span class="toc-text">spring-boot-starter-parent的作用</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#JsonProperty"><span class="toc-number">1.</span> <span class="toc-text">@JsonProperty</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JsonIgnoreProperties、-JsonIgnore"><span class="toc-number">2.</span> <span class="toc-text">@JsonIgnoreProperties、@JsonIgnore</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JsonSerialize、-JsonDeserialize"><span class="toc-number">3.</span> <span class="toc-text">@JsonSerialize、@JsonDeserialize</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JsonFormat"><span class="toc-number">4.</span> <span class="toc-text">@JsonFormat</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JsonCreator"><span class="toc-number">5.</span> <span class="toc-text">@JsonCreator</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JsonTypeInfo"><span class="toc-number">6.</span> <span class="toc-text">@JsonTypeInfo</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JsonAutoDetect"><span class="toc-number">7.</span> <span class="toc-text">@JsonAutoDetect</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -302,7 +350,7 @@
 <script src="https://billts.site/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Mon Nov 26 2018 14:44:27 GMT+0800",
+  id: "Tue Dec 18 2018 15:59:41 GMT+0800",
   owner: 'egoecust',
   repo: 'egoecust.github.io',
   oauth: {
@@ -335,7 +383,7 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
