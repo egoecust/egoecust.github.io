@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="蔡朱奎的博客">
 <meta property="og:description" content="Spring注解大全">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-18T05:42:17.979Z">
+<meta property="og:updated_time" content="2018-12-18T09:21:16.212Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring注解大全">
 <meta name="twitter:description" content="Spring注解大全">
@@ -184,7 +184,7 @@
 <h5 id="GetMapping、-PostMapping、-PutMapping、-DeleteMapping"><a href="#GetMapping、-PostMapping、-PutMapping、-DeleteMapping" class="headerlink" title="@GetMapping、@PostMapping、@PutMapping、@DeleteMapping"></a>@GetMapping、@PostMapping、@PutMapping、@DeleteMapping</h5><p>组合注解，@GetMapping = @RequestMapping(method = RequestMethod.GET)，其它类推。</p>
 <h5 id="ModelAttribute"><a href="#ModelAttribute" class="headerlink" title="@ModelAttribute"></a>@ModelAttribute</h5><h5 id="PathVariable、-ReuqestParam、-RequestBody"><a href="#PathVariable、-ReuqestParam、-RequestBody" class="headerlink" title="@PathVariable、@ReuqestParam、@RequestBody"></a>@PathVariable、@ReuqestParam、@RequestBody</h5><h5 id="ResponseEntity、-ResponseBody、-ResponseStatus"><a href="#ResponseEntity、-ResponseBody、-ResponseStatus" class="headerlink" title="@ResponseEntity、@ResponseBody、@ResponseStatus"></a>@ResponseEntity、@ResponseBody、@ResponseStatus</h5><p>@ResponseEntity注解封装整个HTTP响应，包括状态码，标题和正文，可以用它来完全配置HTTP响应。</p>
 <h5 id="ControllerAdvice、-RestControllerAdvice"><a href="#ControllerAdvice、-RestControllerAdvice" class="headerlink" title="@ControllerAdvice、@RestControllerAdvice"></a>@ControllerAdvice、@RestControllerAdvice</h5><p>在Spring 3.2中，新增了@ControllerAdvice注解，用于定义@ExceptionHandler、@InitBinder和@ModelAttribute方法，适用于所有标注了@RequestMapping的方法。<br>@RestControllerAdvice = @ControllerAdvice + @ResponseBody</p>
-<h5 id="ExceptionHandler"><a href="#ExceptionHandler" class="headerlink" title="@ExceptionHandler"></a>@ExceptionHandler</h5><h5 id="ContextConfiguration"><a href="#ContextConfiguration" class="headerlink" title="@ContextConfiguration"></a>@ContextConfiguration</h5><p>Spring整合JUnit4测试时，使用该注解引入配置类或配置文件<br>@ContextConfiguration(locations = “../applicationContext.xml”)<br>@ContextConfiguration(classes = SimpleConfiguration.class)<br>@ContextConfiguration(locations = { “classpath<em>:/spring1.xml”, “classpath</em>:/spring2.xml” })<br>@ContextConfiguration(classes = { FirstConfiguration.class, SecondConfiguration.class })</p>
+<h5 id="ExceptionHandler"><a href="#ExceptionHandler" class="headerlink" title="@ExceptionHandler"></a>@ExceptionHandler</h5><h5 id="ContextConfiguration"><a href="#ContextConfiguration" class="headerlink" title="@ContextConfiguration"></a>@ContextConfiguration</h5><p>Spring整合JUnit4测试时，使用该注解引入配置类或配置文件<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ContextConfiguration</span>(locations = <span class="string">"../applicationContext.xml"</span>)</span><br><span class="line"><span class="meta">@ContextConfiguration</span>(classes = SimpleConfiguration.class)</span><br><span class="line"><span class="meta">@ContextConfiguration</span>(locations = &#123; <span class="string">"classpath*:/spring1.xml"</span>, <span class="string">"classpath*:/spring2.xml"</span> &#125;) </span><br><span class="line"><span class="meta">@ContextConfiguration</span>(classes = &#123; FirstConfiguration.class, SecondConfiguration.class &#125;)</span><br></pre></td></tr></table></figure></p>
 <h5 id="EnableCaching"><a href="#EnableCaching" class="headerlink" title="@EnableCaching"></a>@EnableCaching</h5><p>启用Spring通用缓存抽象。</p>
 <h3 id="Spring-Security注解"><a href="#Spring-Security注解" class="headerlink" title="Spring Security注解"></a>Spring Security注解</h3><h5 id="EnableWebSecurity"><a href="#EnableWebSecurity" class="headerlink" title="@EnableWebSecurity"></a>@EnableWebSecurity</h5><h3 id="Spring-Boot注解"><a href="#Spring-Boot注解" class="headerlink" title="Spring Boot注解"></a>Spring Boot注解</h3><h5 id="SpringBootConfiguration"><a href="#SpringBootConfiguration" class="headerlink" title="@SpringBootConfiguration"></a>@SpringBootConfiguration</h5><p>Spring Boot项目的配置注解，在Spring Boot项目中推荐使用该注解来替代@Configuration注解。</p>
 <h5 id="EnableAutoConfiguration"><a href="#EnableAutoConfiguration" class="headerlink" title="@EnableAutoConfiguration"></a>@EnableAutoConfiguration</h5><p>启动自动配置，该注解会让Spring Boot根据当前项目所依赖的jar包自动配置项目的相关配置项。</p>
@@ -379,7 +379,7 @@ gitment.render('gitment-ctn')
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 蔡朱奎
+    		&copy; 2019 蔡朱奎
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -483,6 +483,10 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">DB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
@@ -496,10 +500,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ORM</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">DB</a>
               </li>
              
               <li class="article-tag-list-item">

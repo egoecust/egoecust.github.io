@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://www.caizhukui.site">
-  <title>Tag: JPA | 蔡朱奎的博客</title>
+  <title>「鸟哥的Linux私房菜 基础学习篇（第三版）」读书笔记 | 蔡朱奎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="蔡朱奎的博客，主要涉及网站开发的前后端知识">
+  <meta name="description" content="「鸟哥的Linux私房菜 基础学习篇（第三版）」读书笔记">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="website">
-<meta property="og:title" content="蔡朱奎的博客">
-<meta property="og:url" content="https://www.caizhukui.site/tags/JPA/index.html">
+<meta property="og:title" content="「鸟哥的Linux私房菜 基础学习篇（第三版）」读书笔记">
+<meta property="og:url" content="https://www.caizhukui.site/booklist/linux.html">
 <meta property="og:site_name" content="蔡朱奎的博客">
-<meta property="og:description" content="蔡朱奎的博客，主要涉及网站开发的前后端知识">
+<meta property="og:description" content="「鸟哥的Linux私房菜 基础学习篇（第三版）」读书笔记">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-30T06:49:03.313Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="蔡朱奎的博客">
-<meta name="twitter:description" content="蔡朱奎的博客，主要涉及网站开发的前后端知识">
+<meta name="twitter:title" content="「鸟哥的Linux私房菜 基础学习篇（第三版）」读书笔记">
+<meta name="twitter:description" content="「鸟哥的Linux私房菜 基础学习篇（第三版）」读书笔记">
   
     <link rel="alternative" href="/atom.xml" title="蔡朱奎的博客" type="application/atom+xml">
   
@@ -154,79 +155,249 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="page-" class="article article-type-page " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/jpa-annotations/" class="archive-article-date">
-  	<time datetime="2018-12-04T05:20:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/jpa-annotations/">JPA注解大全</a>
+    <h1 class="article-title" itemprop="name">
+      「鸟哥的Linux私房菜 基础学习篇（第三版）」读书笔记
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JPA</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ORM</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/booklist/linux.html" class="archive-article-date">
+  	<time datetime="2019-01-07T07:39:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="Linux的文件权限与目录配置"><a href="#Linux的文件权限与目录配置" class="headerlink" title="Linux的文件权限与目录配置"></a>Linux的文件权限与目录配置</h5><p>Linux的文件管理分为3种身份owner、group、others，3种身份各有read、write、execute权限。<br>Linux系统记录账号、密码、用户组信息的文件分别是/etc/passwd、/etc/shadow、/etc/group。<br>文件特殊权限：SUID、SGID、SBIT</p>
+<h6 id="修改文件权限命令："><a href="#修改文件权限命令：" class="headerlink" title="修改文件权限命令："></a>修改文件权限命令：</h6><ul>
+<li><code>chgrp</code>：改变文件所属用户组</li>
+<li><code>chown</code>：改变文件所有者</li>
+<li><code>chmod</code>：改变文件的权限</li>
+</ul>
+<h6 id="Linux的文件种类："><a href="#Linux的文件种类：" class="headerlink" title="Linux的文件种类："></a>Linux的文件种类：</h6><ul>
+<li>普通文件[-]：又分为纯文本文件、二进制文件、数据格式文件</li>
+<li>目录[d]</li>
+<li>连接文件[l]</li>
+<li>设备与设备文件：又分为块设备文件[b]、字符设备文件[c]</li>
+<li>套接字[s]</li>
+<li>管道[p]</li>
+</ul>
+<p>FHS是Filesystem Hierarchy Standard的缩写，是Linux的目录配置标准。FHS规范了每个特定的目录下应该要放置什么数据，Linux的不同发行版本都会遵循这个标准。</p>
+<ol>
+<li><p>根目录下的子目录：</p>
+<ul>
+<li>/bin：放置在单用户维护模式下还能够被操作的命令，主要有cat、chmod、chown、date、mv、mkdir、cp、bash等</li>
+<li>/boot：放置开机会使用到的文件</li>
+<li>/dev：放置以文件形式存在的设备与接口设备，主要有/dev/null、/dev/zero、/dev/tty、/dev/lp*、/dev/hd*、/dev/sd*等</li>
+<li>/etc：放置系统主要的配置文件，重要的文件有/etc/inittab、/etc/init.d/、/etc/modprobe.conf、/etc/X11/、/etc/fstab、/etc/sysconfig/等<ul>
+<li>/etc/init.d/：放置所有服务的默认启动脚本</li>
+<li>/etc/xinetd.d/：super daemon管理的各项服务的配置文件目录</li>
+<li>/etc/X11/：放置与X Window有关的配置文件，尤其是xorg.conf这个XServer的配置文件</li>
+</ul>
+</li>
+<li>/home：系统默认的用户主文件夹</li>
+<li>/lib：放置开机时会用到的函数库，以及在/bin或/sbin下面的命令会调用的函数库。尤其重要的是/lib/modules这个目录，里面放置了内核相关的模块（驱动程序）</li>
+<li>/media：放置可删除的设备，包括软盘、光盘、DVD等设备，常见文件名有/media/floppy、/media/cdrom等</li>
+<li>/mnt：用来暂时挂载某些额外的设备</li>
+<li>/opt：放置第三方软件的目录。第三方软件一般安装到该目录或者/usr/local/目录下</li>
+<li>/root：系统管理员（root）的主文件夹</li>
+<li>/sbin：放置开机过程中需要的，包括开机、修复、还原系统所需要的命令，常见的命令有fdisk、fsck、ifconfig、init、mkfs等。服务器软件程序放置到/usr/sbin/目录下，自行安装的软件所产生的系统执行文件放置到/usr/local/sbin/目录下。</li>
+<li>/srv：WWW、FTP等网络服务启动之后需要取用的数据目录，WWW服务需要的网页数据就放置在/srv/www/目录下</li>
+<li>/tmp：暂时放置文件的目录，任何人都能够访问，需要定期清理</li>
+<li>/lost+found：使用标准的ext2/ext3文件系统格式才会产生的目录，当文件系统发生错误时，会将丢失的片段放置到这个目录下</li>
+<li>/proc：这个目录是一个虚拟文件系统，这个目录下的数据都是在内存当中，本身不占任何硬盘空间，重要的文件有/proc/cpuinfo、/proc/dma、/proc/interrupts、/proc/ioports、/proc/net/*等</li>
+<li>/sys：这个目录也是一个虚拟文件系统，主要是记录与内核相关的信息，包括目前已加载的内核模块与内核检测到的硬件设备信息等</li>
+</ul>
+</li>
+<li><p>/usr目录下的子目录：</p>
+<ul>
+<li>/usr/X11R6/：放置X Window系统的重要数据</li>
+<li>/usr/bin/：绝大部分的用户可使用命令都放置在该目录下</li>
+<li>/usr/include/：放置C/C++等程序语言的头文件与包含文件</li>
+<li>/usr/lib/：放置各应用软件的函数库、目标文件，以及不被一般用户惯用的执行文件和脚本</li>
+<li>/usr/local/：安装本机自行下载的软件的目录</li>
+<li>/usr/sbin/：放置非系统正常运行所需要的系统命令</li>
+<li>/usr/share/：放置共享文件的目录，常见子目录有/usr/share/man、/usr/share/doc、/usr/share/zoneinfo等</li>
+<li>/usr/src/：放置源码的目录</li>
+</ul>
+</li>
+<li>/var目录下的子目录：<ul>
+<li>/var/cache/：放置应用程序运行过程中产生的暂存文件</li>
+<li>/var/lib/：</li>
+<li>/var/lock/：</li>
+<li>/var/log/：放置登录文件的目录，重要的文件有/var/log/messages、/var/log/wtmp等</li>
+<li>/var/mail/：放置个人电子邮件信箱的目录</li>
+<li>/var/run/：某些程序和服务启动后，会将它们的PID放置在这个目录下</li>
+<li>/var/spool/：放置队列数据</li>
+</ul>
+</li>
+<li>其它重要的目录：<ul>
+<li>/selinux：Secure Enhance Linux（SELinux）的执行目录</li>
+</ul>
+</li>
+</ol>
+<p>Linux开机过程中仅会挂载根目录，/etc、/bin、/dev、/lib、/sbin这5个目录一定要与根目录放在相同的分区。</p>
+<h6 id="查看系统信息命令："><a href="#查看系统信息命令：" class="headerlink" title="查看系统信息命令："></a>查看系统信息命令：</h6><ul>
+<li><code>uname -r</code>：查看内核版本</li>
+<li><code>lsb_release -a</code>：查看distribution的Linux标准（Linux Standard Base）</li>
+</ul>
+<h6 id="文件操作命令："><a href="#文件操作命令：" class="headerlink" title="文件操作命令："></a>文件操作命令：</h6><ul>
+<li><code>cd</code>：切换工作目录</li>
+<li><code>pwd</code>：显示当前目录</li>
+<li><code>mkdir</code>：新建空目录</li>
+<li><code>rmdir</code>：删除空目录</li>
+<li><code>ls</code>：查看文件与目录，默认不显示隐藏文件、以文件名排序</li>
+<li><code>cp</code>：复制文件</li>
+<li><code>mv</code>：移动文件</li>
+<li><code>rm</code>：删除文件</li>
+<li><code>basename</code>：取得路径中的文件名</li>
+<li><code>dirname</code>：取得路径中的目录名</li>
+<li><code>cat</code>、<code>tac</code>、<code>nl</code>、<code>more</code>、<code>less</code>、<code>head</code>、<code>tail</code>、<code>od</code>：查看文件内容</li>
+<li><code>touch</code>：修改文件时间或创建新文件</li>
+<li><code>umask</code>：设置文件默认权限</li>
+<li><code>chattr</code>：设置文件的隐藏属性</li>
+<li><code>lsattr</code>：显示文件的隐藏属性</li>
+<li><code>file</code>：查看文件类型</li>
+<li><code>which</code>：查询可执行文件的完整文件名</li>
+<li><code>whereis</code>、<code>locate</code>、<code>find</code>：查找文件</li>
+</ul>
+<h6 id="环境变量-PATH："><a href="#环境变量-PATH：" class="headerlink" title="环境变量$PATH："></a>环境变量$PATH：</h6><h6 id="文件时间："><a href="#文件时间：" class="headerlink" title="文件时间："></a>文件时间：</h6><p>每个文件都有3个时间：mtime、ctime、atime，使用ls命令查看文件默认显示的是mtime。扇区组成的一个圆就是柱面（Cylinder），柱面是分区（Partition）的最小单位。</p>
+<h6 id="文件系统："><a href="#文件系统：" class="headerlink" title="文件系统："></a>文件系统：</h6><p>扇区（Sector）是硬盘最小的物理存储单位，每个扇区大小为512bytes。</p>
+<h6 id="i-node："><a href="#i-node：" class="headerlink" title="i-node："></a>i-node：</h6><p>inode的内容用于记录文件的权限与相关属性。</p>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://www.caizhukui.site/booklist/linux.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#Linux的文件权限与目录配置"><span class="toc-number">1.</span> <span class="toc-text">Linux的文件权限与目录配置</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#修改文件权限命令："><span class="toc-number">1.1.</span> <span class="toc-text">修改文件权限命令：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Linux的文件种类："><span class="toc-number">1.2.</span> <span class="toc-text">Linux的文件种类：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#查看系统信息命令："><span class="toc-number">1.3.</span> <span class="toc-text">查看系统信息命令：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#文件操作命令："><span class="toc-number">1.4.</span> <span class="toc-text">文件操作命令：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#环境变量-PATH："><span class="toc-number">1.5.</span> <span class="toc-text">环境变量$PATH：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#文件时间："><span class="toc-number">1.6.</span> <span class="toc-text">文件时间：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#文件系统："><span class="toc-number">1.7.</span> <span class="toc-text">文件系统：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#i-node："><span class="toc-number">1.8.</span> <span class="toc-text">i-node：</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Mon Jan 07 2019 15:39:11 GMT+0800",
+  owner: 'egoecust',
+  repo: 'egoecust.github.io',
+  oauth: {
+    client_id: '794f4a9d258b8313fa82',
+    client_secret: '5233335f91ad6d9bf5e5e5a89b42229962105d7c',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -251,7 +422,7 @@
 		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
