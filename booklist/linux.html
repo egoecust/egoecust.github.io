@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="蔡朱奎的博客">
 <meta property="og:description" content="「鸟哥的Linux私房菜 基础学习篇（第三版）」读书笔记">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-30T07:30:43.477Z">
+<meta property="og:updated_time" content="2019-02-19T08:46:11.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「鸟哥的Linux私房菜 基础学习篇（第三版）」读书笔记">
 <meta name="twitter:description" content="「鸟哥的Linux私房菜 基础学习篇（第三版）」读书笔记">
@@ -268,9 +268,24 @@
 <li><code>which</code>：查询可执行文件的完整文件名</li>
 <li><code>whereis</code>、<code>locate</code>、<code>find</code>：查找文件</li>
 </ul>
+<h6 id="文件系统操作命令："><a href="#文件系统操作命令：" class="headerlink" title="文件系统操作命令："></a>文件系统操作命令：</h6><ul>
+<li><code>df</code>：列出文件系统的整体磁盘使用量</li>
+<li><code>du</code>：评估文件系统的磁盘使用量</li>
+<li><code>ln</code>：创建连接文件</li>
+<li><code>fdisk</code>：磁盘分区</li>
+<li><code>mkfs</code>：磁盘格式化</li>
+<li><code>fsck</code>、<code>badblocks</code>：磁盘检验</li>
+<li><code>mount</code>：挂载设备文件</li>
+<li><code>umonut</code>：卸载设备文件</li>
+<li><code>mknod</code>：修改磁盘参数</li>
+<li><code>dump</code>、<code>restore</code>：备份与恢复文件</li>
+<li><code>mkisofs</code>、<code>cdrecord</code>：创建镜像文件、进行光盘刻录</li>
+<li></li>
+</ul>
 <h6 id="环境变量-PATH："><a href="#环境变量-PATH：" class="headerlink" title="环境变量$PATH："></a>环境变量$PATH：</h6><h6 id="文件时间："><a href="#文件时间：" class="headerlink" title="文件时间："></a>文件时间：</h6><p>每个文件都有3个时间：mtime、ctime、atime，使用ls命令查看文件默认显示的是mtime。扇区组成的一个圆就是柱面（Cylinder），柱面是分区（Partition）的最小单位。</p>
 <h6 id="文件系统："><a href="#文件系统：" class="headerlink" title="文件系统："></a>文件系统：</h6><p>扇区（Sector）是硬盘最小的物理存储单位，每个扇区大小为512bytes。</p>
-<h6 id="i-node："><a href="#i-node：" class="headerlink" title="i-node："></a>i-node：</h6><p>inode的内容用于记录文件的权限与相关属性。</p>
+<h6 id="inode："><a href="#inode：" class="headerlink" title="inode："></a>inode：</h6><p>inode的内容用于记录文件的权限与相关属性，每个inode的大小固定为128bytes。</p>
+<h6 id="shell："><a href="#shell：" class="headerlink" title="shell："></a>shell：</h6><p>只要能够操作应用程序的接口都能够称为shell，狭义的shell指的是bash之类命令行方面的软件，广义的shell则包括图形界面的软件。<br>/bin/bash是Linux默认的shell。</p>
 
       
 
@@ -362,7 +377,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#Linux的文件权限与目录配置"><span class="toc-number">1.</span> <span class="toc-text">Linux的文件权限与目录配置</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#修改文件权限命令："><span class="toc-number">1.1.</span> <span class="toc-text">修改文件权限命令：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Linux的文件种类："><span class="toc-number">1.2.</span> <span class="toc-text">Linux的文件种类：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#查看系统信息命令："><span class="toc-number">1.3.</span> <span class="toc-text">查看系统信息命令：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#文件操作命令："><span class="toc-number">1.4.</span> <span class="toc-text">文件操作命令：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#环境变量-PATH："><span class="toc-number">1.5.</span> <span class="toc-text">环境变量$PATH：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#文件时间："><span class="toc-number">1.6.</span> <span class="toc-text">文件时间：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#文件系统："><span class="toc-number">1.7.</span> <span class="toc-text">文件系统：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#i-node："><span class="toc-number">1.8.</span> <span class="toc-text">i-node：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#Linux的文件权限与目录配置"><span class="toc-number">1.</span> <span class="toc-text">Linux的文件权限与目录配置</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#修改文件权限命令："><span class="toc-number">1.1.</span> <span class="toc-text">修改文件权限命令：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Linux的文件种类："><span class="toc-number">1.2.</span> <span class="toc-text">Linux的文件种类：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#查看系统信息命令："><span class="toc-number">1.3.</span> <span class="toc-text">查看系统信息命令：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#文件操作命令："><span class="toc-number">1.4.</span> <span class="toc-text">文件操作命令：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#文件系统操作命令："><span class="toc-number">1.5.</span> <span class="toc-text">文件系统操作命令：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#环境变量-PATH："><span class="toc-number">1.6.</span> <span class="toc-text">环境变量$PATH：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#文件时间："><span class="toc-number">1.7.</span> <span class="toc-text">文件时间：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#文件系统："><span class="toc-number">1.8.</span> <span class="toc-text">文件系统：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#inode："><span class="toc-number">1.9.</span> <span class="toc-text">inode：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#shell："><span class="toc-number">1.10.</span> <span class="toc-text">shell：</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -515,15 +530,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Json</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JPA</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ORM</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Json</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -535,7 +550,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">web.xml</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">WebApplicationInitializer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">DB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">WeUI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Weixin</a>
               </li>
             
             <div class="clearfix"></div>

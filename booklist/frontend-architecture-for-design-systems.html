@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://www.caizhukui.site">
-  <title>Category: UsTvSeries | 蔡朱奎的博客</title>
+  <title>「前端架构设计」读书笔记 | 蔡朱奎的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="蔡朱奎的博客，主要涉及网站开发的前后端知识">
+  <meta name="description" content="「Frontend Architecture for Design Systems」读书笔记">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="website">
-<meta property="og:title" content="蔡朱奎的博客">
-<meta property="og:url" content="https://www.caizhukui.site/categories/UsTvSeries/index.html">
+<meta property="og:title" content="「前端架构设计」读书笔记">
+<meta property="og:url" content="https://www.caizhukui.site/booklist/frontend-architecture-for-design-systems.html">
 <meta property="og:site_name" content="蔡朱奎的博客">
-<meta property="og:description" content="蔡朱奎的博客，主要涉及网站开发的前后端知识">
+<meta property="og:description" content="「Frontend Architecture for Design Systems」读书笔记">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-05T10:49:17.542Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="蔡朱奎的博客">
-<meta name="twitter:description" content="蔡朱奎的博客，主要涉及网站开发的前后端知识">
+<meta name="twitter:title" content="「前端架构设计」读书笔记">
+<meta name="twitter:description" content="「Frontend Architecture for Design Systems」读书笔记">
   
     <link rel="alternative" href="/atom.xml" title="蔡朱奎的博客" type="application/atom+xml">
   
@@ -154,71 +155,166 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="page-" class="article article-type-page " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/ustvseries-db-design/" class="archive-article-date">
-  	<time datetime="2018-12-18T09:07:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/ustvseries-db-design/">「美剧字幕站」数据库设计</a>
+    <h1 class="article-title" itemprop="name">
+      「前端架构设计」读书笔记
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">DB</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/booklist/frontend-architecture-for-design-systems.html" class="archive-article-date">
+  	<time datetime="2019-02-21T05:40:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这本书的干货比较少，特别是后半部分，主要是介绍了作者在开发Red Hat官网时使用的工具集（一堆Grunt插件）。方法论也提到了一点，但比较浅显，没有展开深入讨论。</p>
+<h5 id="前端架构师的用户是开发人员，而不是最终客户。"><a href="#前端架构师的用户是开发人员，而不是最终客户。" class="headerlink" title="前端架构师的用户是开发人员，而不是最终客户。"></a>前端架构师的用户是开发人员，而不是最终客户。</h5><h5 id="前端框架的四个核心：代码、流程、测试、文档。"><a href="#前端框架的四个核心：代码、流程、测试、文档。" class="headerlink" title="前端框架的四个核心：代码、流程、测试、文档。"></a>前端框架的四个核心：代码、流程、测试、文档。</h5><p>为了保持简洁，语义化的HTML标记（section、nav等）是首选。<br>流行的几大CSS理论：OOCSS（Object-Oriented CSS，面向对象的CSS）、SMACSS（Scalable and Modular Architecture for CSS，模块化架构的可扩展CSS）、BEM（Block Element Modifier）。<br>流行的几大任务处理器：Compass、Grunt、Gulp。<br>前端框架设计的BB鸟规则：</p>
+<ul>
+<li>永远不要给布局的子内容强加内边距和元素样式，布局只关注垂直对齐、水平对齐和文字间距；</li>
+<li>主题和别的数据属性值永远不要强制改变外观，他们必须保持布局、组件和元素可以应用于其上；</li>
+<li>组件总是贴着它的父容器的四个边，元素都没有上外边距和左外边距，所有的最后节点（最右边和最下边的节点）的外边距都会被清除；</li>
+<li>组件本身永远不要添加背景、宽度、浮动、内边距和外边距的样式，组件样式是组件内元素的样式；</li>
+<li>每个元素都有且只有一个唯一的且作用域只在组件内的CSS类名，所有的样式都是直接应用到这个选择器上，并且只有上下文和主题能修改元素的样式；</li>
+<li>永远不要在元素上使用上外边距，第一个元素总是贴着它所在组件的顶部；</li>
+<li>JavaScript永远不要绑定任何元素的CSS类名，选中元素通过数据属性实现。</li>
+</ul>
+<h5 id="前端测试"><a href="#前端测试" class="headerlink" title="前端测试"></a>前端测试</h5><p>单元测试（QUnit）、性能测试（PageSpeed、Perfbuget）、视觉还原测试（PhantomCSS，包含PhantomJS、CasperJS、ResembleJS）</p>
+<h5 id="前端文档"><a href="#前端文档" class="headerlink" title="前端文档"></a>前端文档</h5><p>静态的样式文档（Hologram、SassDoc）、动态的图形库（Pattern Lab）</p>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/UsTvSeries//" class="article-tag-list-link color1">UsTvSeries</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://www.caizhukui.site/booklist/frontend-architecture-for-design-systems.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#前端架构师的用户是开发人员，而不是最终客户。"><span class="toc-number">1.</span> <span class="toc-text">前端架构师的用户是开发人员，而不是最终客户。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#前端框架的四个核心：代码、流程、测试、文档。"><span class="toc-number">2.</span> <span class="toc-text">前端框架的四个核心：代码、流程、测试、文档。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#前端测试"><span class="toc-number">3.</span> <span class="toc-text">前端测试</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#前端文档"><span class="toc-number">4.</span> <span class="toc-text">前端文档</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Thu Feb 21 2019 13:40:33 GMT+0800",
+  owner: 'egoecust',
+  repo: 'egoecust.github.io',
+  oauth: {
+    client_id: '794f4a9d258b8313fa82',
+    client_secret: '5233335f91ad6d9bf5e5e5a89b42229962105d7c',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -244,7 +340,7 @@
 		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",

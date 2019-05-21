@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.caizhukui.site/"/>
-  <updated>2018-12-18T09:07:50.228Z</updated>
+  <updated>2019-03-18T06:14:36.573Z</updated>
   <id>https://www.caizhukui.site/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>企业微信对接</title>
+    <link href="https://www.caizhukui.site/work-weixin-integration/"/>
+    <id>https://www.caizhukui.site/work-weixin-integration/</id>
+    <published>2019-03-13T05:02:47.000Z</published>
+    <updated>2019-03-18T06:14:36.573Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="开发资料"><a href="#开发资料" class="headerlink" title="开发资料"></a>开发资料</h6><ul><li><a href="https://work.weixin.qq.com/api/doc#90000/90138/90305" target="_blank" rel="noopener">WeUI for Work</a> 是基于<a href="https://github.com/Tencent/weui" target="_blank" rel="noopener">WeUI</a> 开发的一套同企业微信原生视觉体验一致的基础样式库</li></ul><h5 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h5><ul><li>ProviderSecret：服务商的密钥</li></ul><h6 id="三个token"><a href="#三个token" class="headerlink" title="三个token"></a>三个token</h6><ul><li>企业接口token<br>为企业开放的所有接口，都必须以企业的corpid和永久授权码来获取access_token，然后调用通讯录、应用、消息等接口服务于企业</li><li>应用授权token<br>企业在授权应用时，第三方需要以suite_id、suite_secret换取suite_access_token，再以suite_access_token访问应用授权的接口。在最终访问授权企业的接口时，再将suite_access_token换为企业的access_token</li><li>服务商token<br>以corpid、provider_secret换取provider_access_token，代表的是服务商的身份，而与应用无关。请求单点登录、注册定制化等接口需要用到该凭证</li></ul><h6 id="个回调URL"><a href="#个回调URL" class="headerlink" title="个回调URL"></a>个回调URL</h6><ul><li>系统事件接收URL<br>用于接收跟应用无关的系统消息，如“注册完成”</li><li>业务设置URL<br>该URL为服务商侧的管理后台链接，授权企业的管理员可从企业微信后台的应用详情页免登录直接跳转该链接</li><li>数据回调URL<br>用于接收托管企业微信应用的用户消息和用户事件</li><li>指令回调URL<br>系统将会把此应用的授权变更事件以及ticket参数等推送给此URL</li></ul><h5 id="系统对接"><a href="#系统对接" class="headerlink" title="系统对接"></a>系统对接</h5><h6 id="JS-SDK"><a href="#JS-SDK" class="headerlink" title="JS-SDK"></a>JS-SDK</h6>]]></content>
+    
+    <summary type="html">
+    
+      企业微信对接
+    
+    </summary>
+    
+      <category term="WeUI" scheme="https://www.caizhukui.site/categories/WeUI/"/>
+    
+    
+      <category term="Web" scheme="https://www.caizhukui.site/tags/Web/"/>
+    
+      <category term="WeUI" scheme="https://www.caizhukui.site/tags/WeUI/"/>
+    
+      <category term="Weixin" scheme="https://www.caizhukui.site/tags/Weixin/"/>
+    
+  </entry>
   
   <entry>
     <title>「美剧字幕站」数据库设计</title>
@@ -83,6 +109,34 @@
       <category term="JPA" scheme="https://www.caizhukui.site/tags/JPA/"/>
     
       <category term="ORM" scheme="https://www.caizhukui.site/tags/ORM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用WebApplicationInitializer代替web.xml进行项目配置</title>
+    <link href="https://www.caizhukui.site/migrate-web-xml-to-web-application-initializer/"/>
+    <id>https://www.caizhukui.site/migrate-web-xml-to-web-application-initializer/</id>
+    <published>2018-11-16T05:59:23.000Z</published>
+    <updated>2019-05-21T07:41:40.115Z</updated>
+    
+    <summary type="html">
+    
+      将Spring Web项目配置从基于xml的web.xml迁移到基于注解的WebApplicationInitializer
+    
+    </summary>
+    
+      <category term="Java" scheme="https://www.caizhukui.site/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://www.caizhukui.site/tags/Java/"/>
+    
+      <category term="Web" scheme="https://www.caizhukui.site/tags/Web/"/>
+    
+      <category term="Spring" scheme="https://www.caizhukui.site/tags/Spring/"/>
+    
+      <category term="web.xml" scheme="https://www.caizhukui.site/tags/web-xml/"/>
+    
+      <category term="WebApplicationInitializer" scheme="https://www.caizhukui.site/tags/WebApplicationInitializer/"/>
     
   </entry>
   
