@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.caizhukui.site/"/>
-  <updated>2019-03-18T06:14:36.573Z</updated>
+  <updated>2019-05-21T07:46:13.702Z</updated>
   <id>https://www.caizhukui.site/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用WebApplicationInitializer替换web.xml</title>
+    <link href="https://www.caizhukui.site/migrate-web-xml-to-web-application-initializer/"/>
+    <id>https://www.caizhukui.site/migrate-web-xml-to-web-application-initializer/</id>
+    <published>2019-05-21T07:43:48.000Z</published>
+    <updated>2019-05-21T07:46:13.702Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">session-config</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">session-timeout</span>&gt;</span>30<span class="tag">&lt;/<span class="name">session-timeout</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">session-config</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">error-page</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exception-type</span>&gt;</span>java.lang.Exception<span class="tag">&lt;/<span class="name">exception-type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">location</span>&gt;</span>/uncaughtException<span class="tag">&lt;/<span class="name">location</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">error-page</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">error-page</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">error-code</span>&gt;</span>404<span class="tag">&lt;/<span class="name">error-code</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">location</span>&gt;</span>/resourceNotFound<span class="tag">&lt;/<span class="name">location</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">error-page</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      将Spring Web项目配置从基于xml的web.xml迁移到基于注解的WebApplicationInitializer
+    
+    </summary>
+    
+      <category term="Java" scheme="https://www.caizhukui.site/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://www.caizhukui.site/tags/Java/"/>
+    
+      <category term="Web" scheme="https://www.caizhukui.site/tags/Web/"/>
+    
+      <category term="Spring" scheme="https://www.caizhukui.site/tags/Spring/"/>
+    
+      <category term="web.xml" scheme="https://www.caizhukui.site/tags/web-xml/"/>
+    
+      <category term="WebApplicationInitializer" scheme="https://www.caizhukui.site/tags/WebApplicationInitializer/"/>
+    
+  </entry>
   
   <entry>
     <title>企业微信对接</title>
@@ -109,34 +139,6 @@
       <category term="JPA" scheme="https://www.caizhukui.site/tags/JPA/"/>
     
       <category term="ORM" scheme="https://www.caizhukui.site/tags/ORM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用WebApplicationInitializer代替web.xml进行项目配置</title>
-    <link href="https://www.caizhukui.site/migrate-web-xml-to-web-application-initializer/"/>
-    <id>https://www.caizhukui.site/migrate-web-xml-to-web-application-initializer/</id>
-    <published>2018-11-16T05:59:23.000Z</published>
-    <updated>2019-05-21T07:41:40.115Z</updated>
-    
-    <summary type="html">
-    
-      将Spring Web项目配置从基于xml的web.xml迁移到基于注解的WebApplicationInitializer
-    
-    </summary>
-    
-      <category term="Java" scheme="https://www.caizhukui.site/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="https://www.caizhukui.site/tags/Java/"/>
-    
-      <category term="Web" scheme="https://www.caizhukui.site/tags/Web/"/>
-    
-      <category term="Spring" scheme="https://www.caizhukui.site/tags/Spring/"/>
-    
-      <category term="web.xml" scheme="https://www.caizhukui.site/tags/web-xml/"/>
-    
-      <category term="WebApplicationInitializer" scheme="https://www.caizhukui.site/tags/WebApplicationInitializer/"/>
     
   </entry>
   
