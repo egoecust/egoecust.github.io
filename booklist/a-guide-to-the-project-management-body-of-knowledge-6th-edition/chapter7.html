@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="蔡朱奎的博客">
 <meta property="og:description" content="「项目管理知识体系指南（PMBOK指南）」第七章">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-15T11:52:02.313Z">
+<meta property="og:updated_time" content="2019-08-22T08:10:06.682Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「项目管理知识体系指南（PMBOK指南）」第七章">
 <meta name="twitter:description" content="「项目管理知识体系指南（PMBOK指南）」第七章">
@@ -192,6 +192,15 @@
 </ul>
 </li>
 </ul>
+<p><strong>工具与技术</strong>：</p>
+<ul>
+<li>专家判断</li>
+<li>数据分析<ul>
+<li>备选方案分析</li>
+<li>会议</li>
+</ul>
+</li>
+</ul>
 <p><strong>输出</strong>：</p>
 <ul>
 <li>成本管理计划<ul>
@@ -206,19 +215,173 @@
 </ul>
 </li>
 </ul>
-<p><a name="估算成本"><strong>估算成本</strong></a>是对完成项目工作所需资源成本进行近似估算的过程。<br>输入：项目管理计划（成本管理计划、质量管理计划、范围基准）<br>输出：成本估算和估算依据</p>
-<p><a name="制定预算"><strong>制定预算</strong></a>是汇总所有单个活动或工作包的估算成本，建立一个经批准的成本基准的过程。<br>输入：项目管理计划（成本管理计划、资源管理计划、范围基准）<br>工具和技术：成本汇总、历史信息审核、资金限制平衡、融资<br>输出：成本基准和项目资金需求</p>
-<p><strong>项目预算</strong>包括经批准用于执行项目的全部资金，而<strong>成本基准</strong>是经过批准且按时段分配的项目预算，包括<a href="#应急储备">应急储备</a>，但不包括<a href="#管理储备">管理储备</a>。</p>
-<p><strong>成本基准</strong>是经过批准的、按时间段分配的项目预算，不包括任何管理储备，只有通过正式的变更控制程序才能变更，用作与实际结果进行比较的依据。成本基准是不同进度活动经批准的预算的总和。</p>
-<p><a href="#管理储备">管理储备</a>不包括在成本基准中，但属于项目总预算和资金需求的一部分。</p>
-<p><a name="控制成本"><strong>控制成本</strong></a>是监督项目状态，以更新项目成本和管理成本基准变更的过程。<br>输入：项目管理计划（成本管理计划、成本基准、绩效测量基准）、项目资金需求、工作绩效数据<br>工具和技术：数据分析（<a href="#挣值分析">挣值分析</a>、<a href="#偏差分析">偏差分析</a>、<a href="#趋势分析">趋势分析</a>、<a href="#储备分析">储备分析</a>）、完工尚需绩效指数<br>输出：工作绩效信息、成本预测</p>
-<p><a name="挣值分析"><strong>挣值分析（EVA）</strong></a>将实际进度和成本绩效与绩效测量基准进行比较。挣值管理（EVM）把范围基准、成本基准和进度基准整合起来，形成绩效测量基准。三个关键指标：</p>
+<p><a name="估算成本"><strong>估算成本</strong></a>是对完成项目工作所需资源成本进行<font color="red">近似估算</font>的过程。</p>
+<p><strong>输入</strong>：</p>
 <ul>
-<li>计划价值（PV）是为计划工作分配的经批准的预算。PV的总和有时被称为<strong>绩效测量基准（PMB）</strong>，项目的总计划价值又被称为<strong>完工预算（BAC）</strong>。</li>
-<li>挣值（EV）是对已完成工作的测量值，用该工作的批准预算来表示，是已完成工作的经批准的预算。</li>
-<li>实际成本（AC）是在给定时间段内，执行某活动而实际发生的成本，是为完成与EV相对应的工作而发生的总成本。</li>
+<li>项目管理计划<ul>
+<li>成本管理计划</li>
+<li>质量管理计划</li>
+<li>范围基准</li>
 </ul>
-<p>成本偏差CV = 挣值EV - 实际成本AC<br>进度偏差SV = 挣值EV - 计划价值PV<br>完工偏差VAC = 完工预算BAC - 完工估算EAC<br>进度绩效指数SPI = 挣值EV / 计划价值PV<br>成本绩效指数CPI = 挣值EV / 实际成本AC<br>完工估算EAC = 实际成本AC + 自下而上的完工尚需估算ETC<br>完工尚需绩效指数TCPI = (BAC - EV) / (BAC - AC)</p>
+</li>
+<li>项目文件<ul>
+<li>经验教训登记册</li>
+<li>项目进度计划</li>
+<li>资源需求</li>
+<li>风险登记册</li>
+</ul>
+</li>
+<li>事业环境因素<ul>
+<li>市场条件</li>
+<li>发布的商业信息</li>
+<li>汇率和通货膨胀率</li>
+</ul>
+</li>
+</ul>
+<p><strong>工具和技术</strong>：</p>
+<ul>
+<li>专家判断</li>
+<li>类比估算</li>
+<li>参数估算</li>
+<li>自下而上估算</li>
+<li>三点估算（贝塔分布）</li>
+<li>数据分析<ul>
+<li>备选方案分析</li>
+<li>储备分析</li>
+<li>质量成本</li>
+</ul>
+</li>
+<li>项目管理信息系统（PMIS）</li>
+<li>决策<ul>
+<li>投票</li>
+</ul>
+</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>成本估算 </li>
+<li>估算依据</li>
+<li>项目文件更新<ul>
+<li>假设日志</li>
+<li>经验教训登记册</li>
+<li>风险登记册</li>
+</ul>
+</li>
+</ul>
+<p><a name="制定预算"><strong>制定预算</strong></a>是汇总所有单个活动或工作包的估算成本，建立一个经批准的成本基准的过程。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>项目管理计划<ul>
+<li>成本管理计划</li>
+<li>资源管理计划</li>
+<li>范围基准</li>
+</ul>
+</li>
+<li>项目文件<ul>
+<li>估算依据</li>
+<li>成本估算</li>
+<li>项目进度计划</li>
+<li>风险登记册</li>
+</ul>
+</li>
+<li>商业文件<ul>
+<li>商业论证</li>
+<li>效益管理计划</li>
+</ul>
+</li>
+<li>协议</li>
+</ul>
+<p><strong>工具和技术</strong>：</p>
+<ul>
+<li>专家判断</li>
+<li>成本汇总</li>
+<li>数据分析<ul>
+<li>储备分析</li>
+</ul>
+</li>
+<li>历史信息审核</li>
+<li>资金限制平衡</li>
+<li>融资</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>成本基准</li>
+<li>项目资金需求</li>
+<li>项目文件更新<ul>
+<li>成本估算</li>
+<li>项目进度计划</li>
+<li>风险登记册</li>
+</ul>
+</li>
+</ul>
+<p><a name="控制成本"><strong>控制成本</strong></a>是监督项目状态，以更新项目成本和管理成本基准变更的过程。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>项目管理计划<ul>
+<li>成本管理计划</li>
+<li>成本基准</li>
+<li>绩效测量基准</li>
+</ul>
+</li>
+<li>项目文件<ul>
+<li>经验教训登记册</li>
+</ul>
+</li>
+<li>项目资金需求</li>
+<li>工作绩效数据</li>
+</ul>
+<p><strong>工具和技术</strong>：</p>
+<ul>
+<li>专家判断</li>
+<li>数据分析<ul>
+<li><a href="tools-and-technologies.html#挣值分析" target="_blank">挣值分析（EVA）</a><ul>
+<li>计划价值（PV）</li>
+<li>挣值（EV）</li>
+<li>实际成本（AC）</li>
+<li>完工预算（BAC）</li>
+<li>完工估算（EAC）</li>
+<li>完工尚需估算（ETC）</li>
+</ul>
+</li>
+<li><a href="tools-and-technologies.html#偏差分析" target="_blank">偏差分析</a><ul>
+<li>进度偏差（SV = EV - PV）</li>
+<li>成本偏差（CV = EV - AC）</li>
+<li>完工偏差（VAC = BAC - EAC）</li>
+<li>进度绩效指数（SPI = EV / PV）</li>
+<li>成本绩效指数（CPI = EV / AC）</li>
+</ul>
+</li>
+<li><a href="tools-and-technologies.html#趋势分析" target="_blank">趋势分析</a><ul>
+<li>图表</li>
+<li>预测（EAC = AC + ETC）</li>
+</ul>
+</li>
+<li><a href="tools-and-technologies.html#储备分析" target="_blank">储备分析</a></li>
+</ul>
+</li>
+<li>完工尚需绩效指数（TCPI）</li>
+<li>项目管理信息系统（PMIS）</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>工作绩效信息</li>
+<li>成本预测</li>
+<li>变更请求</li>
+<li>项目管理计划更新<ul>
+<li>成本管理计划</li>
+<li>成本基准</li>
+<li>绩效测量基准</li>
+</ul>
+</li>
+<li>项目文件更新<ul>
+<li>假设日志</li>
+<li>估算依据</li>
+<li>成本估算</li>
+<li>经验教训登记册</li>
+<li>风险登记册</li>
+</ul>
+</li>
+</ul>
 
       
 
@@ -467,6 +630,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">DB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JPA</a>
               </li>
              
@@ -488,10 +655,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">WebApplicationInitializer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">DB</a>
               </li>
              
               <li class="article-tag-list-item">

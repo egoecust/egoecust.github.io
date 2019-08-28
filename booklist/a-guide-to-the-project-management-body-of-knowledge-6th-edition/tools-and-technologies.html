@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="蔡朱奎的博客">
 <meta property="og:description" content="「项目管理知识体系指南（PMBOK指南）」工具与技术">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-15T12:14:15.926Z">
+<meta property="og:updated_time" content="2019-08-23T07:19:11.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「项目管理知识体系指南（PMBOK指南）」工具与技术">
 <meta name="twitter:description" content="「项目管理知识体系指南（PMBOK指南）」工具与技术">
@@ -185,6 +185,8 @@
 <li>数据收集<ul>
 <li>访谈</li>
 <li>核对单</li>
+<li>核查表/计数表</li>
+<li>统计抽样</li>
 <li>标杆对照（识别最佳实践，形成改进意见）</li>
 <li>头脑风暴（在短时间内获得大量创意）<ul>
 <li>头脑风暴</li>
@@ -197,7 +199,9 @@
 </li>
 <li>数据分析<ul>
 <li>模拟（蒙特卡罗分析）</li>
+<li>质量成本</li>
 <li>文件分析</li>
+<li>过程分析</li>
 <li>回归分析</li>
 <li>挣值分析</li>
 <li>趋势分析</li>
@@ -209,7 +213,7 @@
 <li>相关方分析</li>
 <li>备选方案分析</li>
 <li>成本效益分析</li>
-<li>根本原因分析</li>
+<li>根本原因分析（RCA）</li>
 <li>假设情景分析</li>
 <li>风险数据质量评估</li>
 <li>其他风险参数评估</li>
@@ -220,7 +224,7 @@
 <li>决策<ul>
 <li>投票（一致同意、大多数同意、相对多数原则）</li>
 <li>独裁型决策制定</li>
-<li>多标准决策分析</li>
+<li>多标准决策分析（优先矩阵）</li>
 </ul>
 </li>
 <li>人际关系与团队技能<ul>
@@ -239,14 +243,22 @@
 <li>基本规则</li>
 <li>会议 </li>
 <li>数据表现<ul>
+<li>图表</li>
 <li>亲和图（分组）</li>
+<li>因果图/鱼骨图/石川图</li>
 <li>层级图（气泡图）</li>
+<li>矩阵图</li>
+<li>散点图</li>
+<li>流程图/过程图（SIPOC模型）</li>
+<li>控制图</li>
 <li>思维导图</li>
+<li>逻辑数据模型</li>
 <li>概率和影响矩阵</li>
 <li>相关方参与度评估矩阵</li>
 </ul>
 </li>
 <li>项目管理信息系统（PMIS） </li>
+<li>组织理论</li>
 <li>产品分析</li>
 <li>系统交互图</li>
 <li>原型法（故事板）</li>
@@ -257,12 +269,33 @@
 <li>提前量和滞后量</li>
 <li>类比估算（项目详细信息不足时，成本低、耗时少、准确性低）</li>
 <li>参数估算（准确性取决于参数模型的成熟度和基础数据的可靠性）</li>
-<li>三点估算（考虑估算中的不确定性和风险，贝塔分布）</li>
+<li>三点估算（考虑估算中的不确定性和风险，贝塔分布）<ul>
+<li>平均值±1σ之间的概率：68.26%</li>
+<li>平均值±2σ之间的概率：95.46%</li>
+<li>平均值±3σ之间的概率：99.73%</li>
+</ul>
+</li>
 <li>自下而上估算</li>
 <li>进度网络分析</li>
-<li>关键路径法</li>
+<li>关键路径法（CPM）</li>
 <li>资源优化</li>
 <li>进度压缩</li>
+<li>面向X的设计（DfX）</li>
+<li>问题解决<ul>
+<li>定义问题</li>
+<li>识别根本原因</li>
+<li>生成可能的解决方案</li>
+<li>选择最佳解决方案</li>
+<li>执行解决方案</li>
+<li>验证解决方案的有效性</li>
+</ul>
+</li>
+<li>质量改进方法<ul>
+<li>计划-实施-检查-行动（PDCA）</li>
+<li>六西格玛</li>
+</ul>
+</li>
+<li>测试/产品评估</li>
 <li>敏捷发布规划</li>
 <li>提示清单</li>
 <li>不确定性表现形式<ul>
@@ -299,6 +332,7 @@
 </ul>
 </li>
 </ul>
+<p>检查：确认范围、控制质量、控制采购<br>标杆对照：规划需求管理、规划质量管理、规划相关方参与</p>
 
       
 
@@ -547,6 +581,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">DB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JPA</a>
               </li>
              
@@ -568,10 +606,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">WebApplicationInitializer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">DB</a>
               </li>
              
               <li class="article-tag-list-item">
